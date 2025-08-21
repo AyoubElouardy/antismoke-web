@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What Smoking Does to Your Body</title>
+  <meta name="description" content="A simple, responsive webpage explaining the harmful effects of smoking on the body and the benefits of quitting." />
+  <style>
+    :root{
+      --bg:#0b1020;          /* dark base */
+      --card:#0f162e;        /* card background */
+      --text:#e7ecf5;        /* main text */
+      --muted:#a0aec0;       /* secondary text */
+      --accent:#7dd3fc;      /* cyan */
+      --danger:#f87171;      /* red */
+      --good:#34d399;        /* green */
+      --ring: rgba(125,211,252,.35);
+      --radius:18px;
+      --shadow:0 10px 25px rgba(0,0,0,.35);
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial;line-height:1.6;background:radial-gradient(1200px 600px at 20% -10%, #172554 0, transparent 60%),radial-gradient(900px 450px at 120% 10%, #1e293b 0, transparent 60%), var(--bg);color:var(--text)}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--max);margin-inline:auto;padding:24px}
+    .nav{position:sticky;top:0;z-index:50;background:rgba(11,16,32,.7);backdrop-filter:blur(10px);border-bottom:1px solid rgba(125,211,252,.15)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.3px}
+    .logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,#fde047,#fb7185);display:grid;place-items:center;box-shadow:var(--shadow)}
+    .logo span{font-weight:900;color:#0b1020}
+    .menu{display:flex;gap:18px;align-items:center}
+    .btn{padding:10px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.15);background:transparent;color:var(--text);cursor:pointer}
+    .btn.primary{background:linear-gradient(135deg,#22d3ee,#38bdf8);border:none;color:#082032;font-weight:800}
+    .pill{display:inline-flex;gap:8px;align-items:center;border:1px dashed rgba(125,211,252,.4);color:var(--muted);padding:6px 10px;border-radius:999px}
+
+    /* Hero */
+    header.hero{padding:64px 24px}
+    .hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center}
+    h1{font-size:clamp(28px,6vw,54px);line-height:1.05;margin:14px 0 8px}
+    .subtitle{color:var(--muted);font-size:clamp(15px,2.4vw,18px)}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid rgba(125,211,252,.18);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
+
+    /* Sections */
+    section{padding:44px 24px}
+    section h2{font-size:clamp(22px,4.5vw,36px);margin:0 0 10px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(248,113,113,.15);color:var(--danger);font-weight:800;font-size:.85rem}
+    .good{background:rgba(52,211,153,.15);color:var(--good)}
+
+    /* Accordion */
+    details{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px}
+    details+details{margin-top:12px}
+    summary{cursor:pointer;font-weight:700}
+
+    /* Table */
+    table{width:100%;border-collapse:collapse}
+    th,td{border-bottom:1px solid rgba(255,255,255,.08);padding:12px;text-align:left}
+    th{color:#cbd5e1}
+
+    /* Footer */
+    .footer{padding:28px 24px;border-top:1px solid rgba(125,211,252,.18);color:var(--muted);text-align:center}
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero-grid,.grid-3,.grid-2{grid-template-columns:1fr}
+      .menu{display:none}
+    }
+  </style>
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="nav" aria-label="Main">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">
+        <div class="logo" aria-hidden="true"><span>NS</span></div>
+        <span>No Smoke</span>
+      </a>
+      <div class="menu">
+        <a href="#how" class="btn">How it Hurts</a>
+        <a href="#secondhand" class="btn">Secondhand Smoke</a>
+        <a href="#quit" class="btn primary">Benefits of Quitting</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="top">
+    <div class="container hero-grid">
+      <div>
+        <span class="pill">🚭 Health Education • Teen-friendly</span>
+        <h1>What Smoking Does to Your Body</h1>
+        <p class="subtitle">Cigarettes damage almost every organ in your body. Understanding the risks is the first step to protecting your health—or helping someone you love quit.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:14px">
+          <a href="#how" class="btn primary">Explore the harms</a>
+          <a href="#quit" class="btn">See quitting benefits</a>
+        </div>
+      </div>
+      <div class="card" role="img" aria-label="Simple body diagram with labels for lungs, heart, brain, mouth, skin">
+        <h3 style="margin:0 0 8px">Quick hits</h3>
+        <ul style="margin:0;padding-left:18px">
+          <li>🔥 Over 7,000 chemicals in smoke; dozens cause cancer.</li>
+          <li>🫁 Lungs scar, inflame, and lose capacity (COPD risk).</li>
+          <li>❤️ Raises blood pressure, clogs arteries → heart attack & stroke.</li>
+          <li>🧠 Triggers addiction; worsens anxiety and focus over time.</li>
+          <li>🦷 Gum disease, tooth loss; bad breath and stains.</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- How it harms -->
+  <section id="how">
+    <div class="container">
+      <h2>How smoking harms your body</h2>
+      <p class="subtitle">These are the most common ways cigarettes (and other burned tobacco) cause short‑ and long‑term damage.</p>
+      <div class="grid-3">
+        <div class="card">
+          <span class="badge">Lungs & Breathing</span>
+          <h3>Chronic damage</h3>
+          <p>Smoke irritates airways and destroys tiny air sacs (alveoli). This leads to chronic bronchitis and emphysema (together called COPD), persistent cough, wheeze, and shortness of breath. Infections like pneumonia also become more likely.</p>
+        </div>
+        <div class="card">
+          <span class="badge">Heart & Blood</span>
+          <h3>Clots and clogged arteries</h3>
+          <p>Chemicals in smoke injure vessel walls, make blood stickier, and lower oxygen. Result: higher risk of heart attack, stroke, and peripheral artery disease—even in young smokers.</p>
+        </div>
+        <div class="card">
+          <span class="badge">Cancer</span>
+          <h3>Multiple organs</h3>
+          <p>Smoking is a leading cause of cancers of the lung, mouth, throat, esophagus, pancreas, bladder, kidney, cervix, stomach, and more.</p>
+        </div>
+        <div class="card">
+          <span class="badge">Brain & Mental Health</span>
+          <h3>Addiction & mood</h3>
+          <p>Nicotene changes reward pathways, causing dependence. While a puff may feel calming, dependence can worsen anxiety, stress, and concentration between cigarettes.</p>
+        </div>
+        <div class="card">
+          <span class="badge">Mouth, Teeth, Skin</span>
+          <h3>Visible effects</h3>
+          <p>Gum disease, tooth decay, bad breath, stained teeth, and earlier wrinkles due to reduced blood flow and collagen breakdown.</p>
+        </div>
+        <div class="card">
+          <span class="badge">Fertility & Pregnancy</span>
+          <h3>Serious risks</h3>
+          <p>Smoking lowers fertility in all genders. During pregnancy it increases miscarriage, placental problems, premature birth, low birth weight, and SIDS risk.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:22px" class="card">
+        <h3 style="margin-top:0">Common myths vs facts</h3>
+        <table aria-label="Myths and facts about smoking">
+          <thead><tr><th>Myth</th><th>Fact</th></tr></thead>
+          <tbody>
+            <tr><td>“I only smoke on weekends, so it’s fine.”</td><td>There’s no safe level of smoking; even light/occasional smoking harms the heart and lungs.</td></tr>
+            <tr><td>“Filters make cigarettes safer.”</td><td>Filters do not remove most toxins and can lead to deeper inhalation.</td></tr>
+            <tr><td>“Quitting now won’t matter.”</td><td>Benefits start within minutes to hours—and keep growing over months and years.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Secondhand smoke -->
+  <section id="secondhand">
+    <div class="container">
+      <h2>Secondhand smoke</h2>
+      <p class="subtitle">Breathing someone else’s smoke is dangerous—especially for children, people with asthma, and during pregnancy.</p>
+      <div class="grid-2">
+        <div class="card">
+          <h3>What it causes</h3>
+          <ul>
+            <li>More asthma attacks and bronchitis in kids.</li>
+            <li>Ear infections and pneumonia.</li>
+            <li>Higher risk of heart disease and lung cancer in adults who live with smokers.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Protect yourself & others</h3>
+          <ul>
+            <li>Keep homes and cars 100% smoke‑free (windows don’t help).</li>
+            <li>Ask visitors to smoke outside, away from doors and windows.</li>
+            <li>Choose smoke‑free public spaces whenever possible.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits of quitting -->
+  <section id="quit">
+    <div class="container">
+      <h2 class="good">Benefits of quitting (timeline)</h2>
+      <p class="subtitle">Your body starts healing quickly. Here’s what typically improves after your last cigarette:</p>
+      <details open>
+        <summary>20 minutes</summary>
+        <p>Heart rate and blood pressure begin to drop.</p>
+      </details>
+      <details>
+        <summary>12 hours</summary>
+        <p>Carbon monoxide levels in blood return closer to normal, improving oxygen delivery.</p>
+      </details>
+      <details>
+        <summary>2 weeks – 3 months</summary>
+        <p>Circulation and lung function improve; walking and exercise feel easier.</p>
+      </details>
+      <details>
+        <summary>1 – 12 months</summary>
+        <p>Coughing and shortness of breath decrease as cilia (airway cleaners) recover.</p>
+      </details>
+      <details>
+        <summary>1 – 5 years</summary>
+        <p>Risk of heart disease and stroke drops significantly; some cancer risks decline.</p>
+      </details>
+      <details>
+        <summary>10 years and beyond</summary>
+        <p>Lung cancer risk about halves vs. continuing smokers; risks for many other cancers keep falling.</p>
+      </details>
+
+      <div class="card" style="margin-top:16px">
+        <h3 style="margin:0 0 6px">Ready to quit or help a friend?</h3>
+        <ul>
+          <li>Pick a quit date and plan: triggers, alternatives (water, sugar‑free gum), and support.</li>
+          <li>Tell friends/family for accountability.</li>
+          <li>Talk to a healthcare professional about proven methods (nicotine replacement, prescription meds, counseling).</li>
+          <li>Use quitlines or local support groups if available in your country/region.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sources -->
+  <section id="sources">
+    <div class="container">
+      <h2>Trusted sources to learn more</h2>
+      <p class="subtitle">For deeper reading and up‑to‑date guidance, check official health organizations in your region.</p>
+      <div class="grid-3">
+        <div class="card">
+          <h3>WHO – Tobacco</h3>
+          <p>World Health Organization pages on tobacco and health.</p>
+          <a href="https://www.who.int/health-topics/tobacco" target="_blank" rel="noopener">Visit WHO</a>
+        </div>
+        <div class="card">
+          <h3>CDC – Smoking</h3>
+          <p>US Centers for Disease Control: health effects and quitting tips.</p>
+          <a href="https://www.cdc.gov/tobacco/" target="_blank" rel="noopener">Visit CDC</a>
+        </div>
+        <div class="card">
+          <h3>Local Quitlines</h3>
+          <p>Search for your country’s quitline or smoke‑free program.</p>
+          <a href="https://en.wikipedia.org/wiki/Smoking_cessation#Telephone_quitlines" target="_blank" rel="noopener">Find a quitline</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">© <span id="year"></span> No Smoke. Educational content only.</div>
+  </footer>
+
+  <script>
+    // Set dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Small usability: open only one details at a time (accordion effect)
+    const groups = document.querySelectorAll('#quit details');
+    groups.forEach(d => d.addEventListener('toggle', () => {
+      if(d.open){ groups.forEach(o => { if(o!==d) o.open=false; }); }
+    }));
+  </script>
+</body>
+</html>
