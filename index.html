@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoke-Free Commitment | Health & Wellness</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .logo {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .tagline {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+        
+        .stat-box {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 15px;
+            width: 220px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #fdbb2d;
+        }
+        
+        .stat-text {
+            font-size: 16px;
+        }
+        
+        .content-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: 60px 0;
+        }
+        
+        .text-content {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        
+        .image-content {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #fdbb2d;
+            color: #1a2a6c;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn:hover {
+            background: #ffcc44;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .benefits {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+            backdrop-filter: blur(5px);
+        }
+        
+        .benefit-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+        
+        .benefit-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 18px;
+        }
+        
+        .benefit-list li i {
+            position: absolute;
+            left: 0;
+            top: 3px;
+            color: #fdbb2d;
+        }
+        
+        .testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 40px 0;
+        }
+        
+        .testimonial {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 15px;
+            width: 300px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            text-align: right;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .social-icons {
+            margin-bottom: 20px;
+        }
+        
+        .social-icons a {
+            color: #fff;
+            font-size: 24px;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: #fdbb2d;
+        }
+        
+        @media (max-width: 768px) {
+            .content-section {
+                flex-direction: column;
+            }
+            
+            .stat-box {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Smoke-Free Commitment</div>
+            <div class="tagline">Take the first step towards a healthier life</div>
+        </header>
+        
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-number">480,000</div>
+                <div class="stat-text">Deaths annually in the U.S. from smoking</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">16M</div>
+                <div class="stat-text">Americans live with smoking-related disease</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">+10y</div>
+                <div class="stat-text">Longer life expectancy for non-smokers</div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <div class="text-content">
+                <h2>Why Quit Smoking?</h2>
+                <p>Smoking is the leading cause of preventable death worldwide. Quitting smoking is one of the most important actions people can take to improve their health.</p>
+                <p>Within just 20 minutes of quitting, your heart rate drops. After 12 hours, the carbon monoxide level in your blood drops to normal. Within 2-12 weeks, your circulation improves and lung function increases.</p>
+                <a href="#" class="btn">Start Your Journey</a>
+            </div>
+            <div class="image-content">
+                <img src="https://images.unsplash.com/photo-1581578021517-5d8ad8597858?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Healthy Lungs" style="width: 100%; max-width: 400px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);">
+            </div>
+        </div>
+        
+        <div class="benefits">
+            <h2>Benefits of Quitting</h2>
+            <ul class="benefit-list">
+                <li><i class="fas fa-heart"></i> Reduces risk of heart disease and stroke</li>
+                <li><i class="fas fa-lungs"></i> Improves lung function and breathing</li>
+                <li><i class="fas fa-smile"></i> Enhances sense of taste and smell</li>
+                <li><i class="fas fa-money-bill-wave"></i> Saves money - thousands of dollars per year</li>
+                <li><i class="fas fa-energy"></i> Increases energy levels and physical performance</li>
+                <li><i class="fas fa-users"></i> Protects family and friends from secondhand smoke</li>
+            </ul>
+        </div>
+        
+        <h2 style="text-align: center;">Success Stories</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <div class="testimonial-text">"After 15 years of smoking, I finally quit with the help of this program. It's been 2 years now and I've never felt better!"</div>
+                <div class="testimonial-author">- Michael R.</div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-text">"The support system and resources provided made all the difference. I'm now smoke-free for 18 months and my asthma has improved dramatically."</div>
+                <div class="testimonial-author">- Sarah K.</div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-text">"Quitting was the best decision I ever made. I have more energy, I can breathe easier, and I've saved over $3,000 already!"</div>
+                <div class="testimonial-author">- James T.</div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2023 Smoke-Free Commitment. All rights reserved.</p>
+            <p>Disclaimer: This site is for educational purposes only. Consult a healthcare professional for medical advice.</p>
+        </footer>
+    </div>
+</body>
+</html>
